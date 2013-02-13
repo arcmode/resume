@@ -21,7 +21,6 @@ if (referrer !== domain) {
 	$(document).ready(function(){
 		loading.fadeOut(600, function(){
 			wrapper.fadeIn(600, function(){
-				$('#loading').trigger('end');
 				loading.trigger('end');
 			});
 		});
