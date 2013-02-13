@@ -23,9 +23,6 @@ html {
 body {
   margin: 0 0 30px;
 }
-#main {
-  padding-bottom: 30px;
-}
 footer {
   position: absolute;
   left: 0;
@@ -57,4 +54,7 @@ body {
 }
 #main #content {
   padding-top: 60px;
+}
+#main #content section {
+  margin-bottom: 20px;
 }
