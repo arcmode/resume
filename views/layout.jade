@@ -5,21 +5,21 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/gradient.css')
 	body
+		#superbar.navbar.navbar-fixed-top.navbar-inverse
+			.navbar-inner
+				.container
+					a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+					a.brand(href="#")= title
+					.nav-collapse
+						ul.nav
+							block navResume
+								li
+									a(href="/") Resume
+							li.divider
+							block navContact
+								li
+									a(href="/contact") Contact
 		#wrapper
-			.navbar.navbar-fixed-top.navbar-inverse
-				.navbar-inner
-					.container
-						a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
-						a.brand(href="#")= title
-						.nav-collapse
-							ul.nav
-								block navResume
-									li
-										a(href="/") Resume
-								li.divider
-								block navContact
-									li
-										a(href="/contact") Contact
 			#main.container
 				#content
 					block content
