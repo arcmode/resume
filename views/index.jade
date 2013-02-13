@@ -1,0 +1,21 @@
+extends layout
+
+block sidebarIndex
+	li.active
+		a(href="/") Home
+
+block breadcrumb
+	li.active
+		span.divider /
+		span Home
+
+block content
+	h3= welcome
+	p
+		span Hello, I'm a geek and this is just a backup in the cloud of my 
+		a(href="/resume") resume
+		span . 
+	p Hope to have some time soon in order to include other stuff, maybe a blog.
+	p
+		span If you want to send me a message, please 
+		a(href="/contact") contact me.

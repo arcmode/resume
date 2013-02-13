@@ -1,0 +1,74 @@
+extends layout
+
+block breadcrumb
+	li.active
+		span.divider /
+		span Contact
+
+block sidebarContact
+	li.active
+		a(href="/contact") Contact
+
+block content
+	p
+		span If you want to send me a message please use this form or send me an email to 
+		a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
+	.row-fluid
+		#contactForm.span5
+			form.form-horizontal.well
+				fieldset
+					legend Contact Form 
+						small(style="color: grey;") coming soon...
+					.control-group
+						label.control-label(for="email") Email
+						.controls
+							input#email.input-xlarge(type="email", required, disabled)
+					.control-group
+						label.control-label(for="message") Message
+						.controls
+							textarea#message.input-xlarge(rows="3", required, disabled)
+					.form-actions
+						button.btn.btn-primary.btn-large(type="submit", disabled) Send
+						span &nbsp;&nbsp;
+						button.btn.btn-large(type="reset", disabled) Cancel
+		.span7
+			#map_canvas
+
+block append scripts
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+	script
+		var map;
+		var canvas = document.getElementById('map_canvas');
+		function initialize() {
+			var myLatlng = new google.maps.LatLng(-33.443814,-70.644289);
+			var mapOptions = {
+				zoom: 15,
+				center: myLatlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			map = new google.maps.Map(canvas, mapOptions);
+
+			var contentString =
+				'<h2>David Rojas Camaggi</h2>'+
+				'<p>Marcoleta 594, Depto 9, Santiago</p>'+
+				'<p>T: <a href="tel:56987322336">09 873 22 336</a></p>';
+
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString,
+				maxWidth: 500
+			});
+
+			var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: 'Hello World!'
+			});
+
+			//- google.maps.event.addListener(marker, 'click', function() {
+				infowindow.open(map,marker);
+			//- });
+				var currentPoint = new google.maps.LatLng(-33.440959,-70.643517); 
+				map.panTo(currentPoint);
+		}
+		$('#loading').on('end', function(){ initialize() });
+		google.maps.event.addDomListener(window, 'load', initialize);

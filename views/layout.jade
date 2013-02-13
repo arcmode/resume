@@ -1,0 +1,35 @@
+doctype 5
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/gradient.css')
+	body
+		#wrapper.container-fluid
+			.row-fluid
+				#sidebar.span2
+					ul.nav.nav-list
+						li.nav-header Navigation
+						block sidebarIndex
+							li
+								a(href="/") Inicio
+						block sidebarResume
+							li
+								a(href="/resume") Resume
+						li.divider
+						block sidebarContact
+							li
+								a(href="/contact") Contact
+				#main.span10
+					#header
+						h3.page-header= title
+							ul.breadcrumb
+								block breadcrumb
+					#content
+						block content
+		include includes/footer
+		include includes/loading
+	block scripts
+		script(src="/javascripts/jquery-1.9.0.min.js")
+		script(src="/javascripts/jquery-ui-1.10.0.custom.min.js")
+		script(src="/javascripts/loader.js")
