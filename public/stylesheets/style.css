@@ -1,6 +1,23 @@
 @import "bootstrap.min.css";
-@import "bootstrap-responsive.min.css";
 @import "bootswatch.css";
+@import "bootstrap-responsive.min.css";
+@media (max-width: 979px) {
+  .navbar-inverse .nav-collapse .nav > li > a,
+  .navbar-inverse .nav-collapse .dropdown-menu a {
+    color: #f5f5f5;
+  }
+  .navbar-inverse .nav-collapse .nav > li:hover {
+    background: #f00;
+  }
+  #githubRibbon {
+    display: none;
+  }
+}
+@media (min-width: 979px) {
+  #content {
+    padding-top: 60px;
+  }
+}
 .navbar-inverse .navbar-inner {
   background-color: #0380ff;
 }
@@ -12,6 +29,9 @@
 }
 #contactForm .form-horizontal .form-actions {
   padding-left: 95px;
+}
+#contactForm button {
+  padding: 20px 30px;
 }
 #map_canvas {
   height: 381px;
@@ -52,9 +72,6 @@ body {
 .btn-primary:hover {
   background-color: #0072e6;
 }
-#main #content {
-  padding-top: 60px;
-}
-#main #content section {
+#content section {
   margin-bottom: 20px;
 }
