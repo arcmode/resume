@@ -7,4 +7,4 @@ Based on a work at [http://github.com/drojas/resume][1].
 [0]: http://creativecommons.org/licenses/by-nc-sa/3.0/
 [1]: http://github.com/drojas/resume
 
-## Built with Node.js / Express / Jade / Stylus / Twitter Bootstrap
+### Built with Node.js / Express / Jade / Stylus / Twitter Bootstrap
