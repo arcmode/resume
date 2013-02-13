@@ -16,10 +16,10 @@ if (referrer !== domain) {
 	    of: $(document),
 	    collision: "flipfit"
 	});
-	loading.fadeIn(300);
+	loading.fadeIn(600);
 
 	$(document).ready(function(){
-		loading.fadeOut(300, function(){
+		loading.fadeOut(600, function(){
 			wrapper.fadeIn(600, function(){
 				$('#loading').trigger('end');
 				loading.trigger('end');
