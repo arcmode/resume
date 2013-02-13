@@ -37,7 +37,6 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/resume', routes.resume);
 app.get('/contact', routes.contact);
 
 http.createServer(app).listen(app.get('port'), function(){

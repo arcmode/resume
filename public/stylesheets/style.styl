@@ -1,16 +1,18 @@
-@import "bootstrap.css"
+@import "bootstrap.min.css"
+@import "bootstrap-responsive.min.css"
+@import "bootswatch.css"
 @import "colors.styl"
-@import "sidebar.styl"
+@import "navbar.styl"
 @import "contact.styl"
 @import "footer.styl"
 @import "loading.styl"
 
 
 body
-  	// font-family: "Lucida Grande", Helvetica, Arial, sans-serif
-  	padding-top: 20px
-  	border-top: 5px solid baseColor
-	color baseColor
+  	font-family: "Lucida Grande", Helvetica, Arial, sans-serif
+  	// padding-top: 20px
+  	// border-top: 5px solid baseColor
+	// color baseColor
 
 .page-header
 	border-bottom-color lineColor
@@ -21,18 +23,7 @@ body
 		background-color baseColor
 
 #main
-	border-left	1px solid lineColor
-	padding-left	25px
-	// min-height 550px
-
-	#header
-		.breadcrumb
-			display	inline
-			background-color transparent
-			font-size 70%
-			li
-				opacity 0.4
-				&:hover, &.active
-					opacity 0.8
+	#content
+		padding-top 60px
 
 

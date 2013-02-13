@@ -5,28 +5,24 @@ html
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='/stylesheets/gradient.css')
 	body
-		#wrapper.container-fluid
-			.row-fluid
-				#sidebar.span2
-					ul.nav.nav-list
-						li.nav-header Navigation
-						block sidebarIndex
-							li
-								a(href="/") Inicio
-						block sidebarResume
-							li
-								a(href="/resume") Resume
-						li.divider
-						block sidebarContact
-							li
-								a(href="/contact") Contact
-				#main.span10
-					#header
-						h3.page-header= title
-							ul.breadcrumb
-								block breadcrumb
-					#content
-						block content
+		#wrapper
+			.navbar.navbar-fixed-top.navbar-inverse
+				.navbar-inner
+					.container
+						a.btn.btn-navbar(data-toggle="collapse", data-target=".nav-collapse")
+						a.brand(href="#")= title
+						.nav-collapse
+							ul.nav
+								block navResume
+									li
+										a(href="/") Resume
+								li.divider
+								block navContact
+									li
+										a(href="/contact") Contact
+			#main.container
+				#content
+					block content
 		include includes/footer
 		include includes/loading
 	block scripts

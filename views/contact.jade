@@ -1,15 +1,11 @@
 extends layout
 
-block breadcrumb
-	li.active
-		span.divider /
-		span Contact
-
-block sidebarContact
+block navContact
 	li.active
 		a(href="/contact") Contact
 
 block content
+	h3.page-header Contact me
 	p
 		span If you want to send me a message please use this form or send me an email to 
 		a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
@@ -22,11 +18,11 @@ block content
 					.control-group
 						label.control-label(for="email") Email
 						.controls
-							input#email.input-xlarge(type="email", required, disabled)
+							input#email.input-large(type="email", required, disabled)
 					.control-group
 						label.control-label(for="message") Message
 						.controls
-							textarea#message.input-xlarge(rows="3", required, disabled)
+							textarea#message.input-large(rows="3", required, disabled)
 					.form-actions
 						button.btn.btn-primary.btn-large(type="submit", disabled) Send
 						span &nbsp;&nbsp;

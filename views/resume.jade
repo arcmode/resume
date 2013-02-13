@@ -1,6 +1,6 @@
 extends layout
 
-block sidebarResume
+block navResume
 	li.active
 		a(href="/") Resume
 
@@ -11,7 +11,7 @@ block breadcrumb
 
 block content
 
-	h3 Personal Interests
+	h3.page-header Personal Interests
 	ul.nav.nav-list
 		li Science
 		li Home made electronics
@@ -20,7 +20,7 @@ block content
 		li General geekiness
 		li Entrepreneurship
 
-	h3 Education
+	h3.page-header Education
 	ul.nav.nav-list
 		li
 			strong
@@ -65,14 +65,14 @@ block content
 			br
 			span 2003
 
-	h3 Publications
+	h3.page-header Publications
 	ul.nav.nav-list
 		li
 			span Tomas Veloz, Bryan Reynaert, David Rojas and Peter Dittrich, "A decomposition theorem in chemical organizations", Advances in Artificial Life, ECAL 2011: Proceedings of the Eleventh European Conference on the Synthesis and Simulation of Living Systems, T. Lenaerts, M. Giacobini, H. Bersini, P. Bourgine, M. Dorigo and R. Doursat, eds. MIT Press, ISBN 978-0-262-29714-1, 2011, pag. 820. 
 			span
 				a(href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=12760", target="_blank") Available online
 	
-	h3 Work experience
+	h3.page-header Work experience
 	ul.nav.nav-list
 		li
 			strong
@@ -105,14 +105,14 @@ block content
 			br
 			span 2009 to the date
 
-	h3 Programming languages / Frameworks
+	h3.page-header Programming languages / Frameworks
 	ul.nav.nav-list
 		li Node.js / Express / Restify
 		li Python / Django
 		li Ruby / RoR
 		li JQuery
 
-	h3 Human languages
+	h3.page-header Human languages
 	ul.nav.nav-list
 		li Spanish (native)
 		li English (read/write: advanced, speak: intermediate)

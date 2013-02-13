@@ -1,13 +1,8 @@
-@import "bootstrap.css";
-.nav-list > .active > a,
-.nav-list > .active > a:hover {
-  background-color: #0072e6;
-}
-.nav-list > li > a:hover {
-  background-color: #73b8ff;
-}
-#sidebar .divider {
-  background-color: #d1d1d1;
+@import "bootstrap.min.css";
+@import "bootstrap-responsive.min.css";
+@import "bootswatch.css";
+.navbar-inverse .navbar-inner {
+  background-color: #0380ff;
 }
 #contactForm .form-horizontal .control-label {
   width: 75px;
@@ -49,10 +44,8 @@ footer {
   display: none;
 }
 body {
-  padding-top: 20px;
-  border-top: 5px solid #0072e6;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-color baseColor,
 .page-header {
   border-bottom-color: #d1d1d1;
 }
@@ -62,19 +55,6 @@ color baseColor,
 .btn-primary:hover {
   background-color: #0072e6;
 }
-#main {
-  border-left: 1px solid #d1d1d1;
-  padding-left: 25px;
-}
-#main #header .breadcrumb {
-  display: inline;
-  background-color: transparent;
-  font-size: 70%;
-}
-#main #header .breadcrumb li {
-  opacity: 0.4;
-}
-#main #header .breadcrumb li:hover,
-#main #header .breadcrumb li.active {
-  opacity: 0.8;
+#main #content {
+  padding-top: 60px;
 }
