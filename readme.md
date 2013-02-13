@@ -1,4 +1,4 @@
-# Simple resume
+# Resume
 
 A responsive Resume built with Node.js + Express + Jade + Stylus + Twitter Bootstrap
 
