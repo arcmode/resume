@@ -31,6 +31,19 @@ a
 	&:hover
 		text-decoration none
 
-#content section
-	margin-bottom 20px
-
+#content
+	section
+		padding 50px 0
+		&.active
+			-webkit-transition 1s
+			-moz-transition 1s
+			transition 1s
+			.page-header
+				margin-left -20px
+				-webkit-transition 2s
+				-moz-transition 2s
+				transition 2s
+				&:after
+					content ' =>'
+				// &:before
+				// 	content '> '

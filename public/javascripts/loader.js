@@ -10,6 +10,14 @@ loading.on('end', function(){
 
 if (referrer !== domain) {
 
+	var path = $('<small/>', {
+		'html': window.location.pathname === '/'? '/resume': window.location.pathname,
+	}).appendTo(loading);
+
+	var hash = $('<small/>', {
+		'html': window.location.hash
+	}).appendTo(loading);
+
 	loading.position({
 	    my: "center",
 	    at: "center",
