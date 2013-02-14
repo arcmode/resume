@@ -33,5 +33,5 @@ function initialize() {
 	var currentPoint = new google.maps.LatLng(-33.44018,-70.643377); 
 	map.panTo(currentPoint);
 }
-$('#loading').on('end', function(){ initialize() });
+$('#loading').on('end', initialize);
 google.maps.event.addDomListener(window, 'load', initialize);

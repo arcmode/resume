@@ -11,7 +11,7 @@ loading.on('end', function(){
 if (referrer !== domain) {
 
 	var path = $('<small/>', {
-		'html': window.location.pathname === '/'? '/resume': window.location.pathname,
+		'html': window.location.pathname === '/'? '/resume': window.location.pathname
 	}).appendTo(loading);
 
 	var hash = $('<small/>', {
