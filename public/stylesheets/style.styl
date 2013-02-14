@@ -7,6 +7,7 @@
 @import "contact.styl"
 @import "footer.styl"
 @import "loading.styl"
+@import "go-top.styl"
 
 
 body
@@ -23,6 +24,13 @@ body
 	&:hover
 		background-color baseColor
 
+
+a
+	-webkit-transition 0.5s
+	-moz-transition 0.5s
+	transition 0.5s
+	&:hover
+		text-decoration none
 
 #content section
 	margin-bottom 20px
