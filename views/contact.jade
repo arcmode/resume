@@ -1,5 +1,32 @@
 extends layout
 
+block navResume
+	li.simple
+		a(href="/") Resume
+	li.dropdown
+		a.dropdown-toggle(
+			href='#',
+			data-toggle='dropdown')
+			| Resume 
+			b.caret
+		ul.dropdown-menu
+			li
+				a(href="/#interests") Interests
+			li
+				a(href="/#skills") Skills
+			li
+				a(href="/#programming") Programming languages
+			li
+				a(href="/#databases") Databases
+			li
+				a(href="/#education") Education
+			li
+				a(href="/#publications") Publications
+			li
+				a(href="/#experience") Work experience
+			li
+				a(href="/#languages") Human languages
+
 block navContact
 	li.active
 		a(href="/contact") Contact

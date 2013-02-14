@@ -18,7 +18,7 @@ if (referrer !== domain) {
 	});
 	loading.fadeIn(600);
 
-	$(document).ready(function(){
+	$(window).load(function(){
 		loading.fadeOut(600, function(){
 			wrapper.fadeIn(600, function(){
 				loading.trigger('end');

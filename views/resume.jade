@@ -1,9 +1,5 @@
 extends layout
 
-block navResume
-	li.active
-		a(href="/") Resume
-
 block breadcrumb
 	li.active
 		span.divider /
@@ -11,7 +7,7 @@ block breadcrumb
 
 block content
 
-	section
+	section#interests
 		h3.page-header Interests
 		ul.nav.nav-list
 			li Science
@@ -26,14 +22,14 @@ block content
 			li Football
 			li Running
 
-	section
+	section#skills
 		h3.page-header Skills / Tools
 		ul.nav.nav-list
 			li Git
 			li GNU/Linux command line
 			li Amazon AWS (EC2, S3, ELB, ElastiCache)
 
-	section
+	section#programming
 		h3.page-header Programming languages / Frameworks
 		ul.nav.nav-list
 			li Node.js / Express / Restify
@@ -42,13 +38,13 @@ block content
 			li javascript / JQuery
 			li css / less / stylus / twitter-bootstrap
 
-	section
+	section#databases
 		h3.page-header Databases
 		ul.nav.nav-list
 			li SQL (MySQL, PostgreSQL)
 			li NoSQL (MongoDB, Neo4j)
 
-	section
+	section#education
 		h3.page-header Education
 		ul.nav.nav-list
 			li
@@ -94,7 +90,7 @@ block content
 				br
 				span 2003
 
-	section
+	section#publications
 		h3.page-header Publications
 		ul.nav.nav-list
 			li
@@ -102,7 +98,8 @@ block content
 				span
 					a(href="http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=12760", target="_blank") Available online
 				span . 
-	section
+	
+	section#experience
 		h3.page-header Work experience
 		ul.nav.nav-list
 			li
@@ -137,7 +134,7 @@ block content
 				br
 				span 2009 to the date
 
-	section
+	section#languages
 		h3.page-header Human languages
 		ul.nav.nav-list
 			li Spanish (native)

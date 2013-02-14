@@ -6,7 +6,8 @@
 var express = require('express')
   , routes = require('./routes')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , expressUglify = require('express-uglify');
 
 var app = express();
 
@@ -27,6 +28,10 @@ app.configure(function(){
     })
     next();
   });
+  app.use(expressUglify.middleware({
+    src: __dirname + '/public',
+    logLevel: 'info'
+  }));
   app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
