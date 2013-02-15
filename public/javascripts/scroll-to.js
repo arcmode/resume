@@ -24,6 +24,10 @@ setInterval(function(){
 function activateFirstSection(){
 	$('section').each(function(index){
 		if (isScrolledIntoView(this)) {
+			var parents = $('[href="' + '#' + $(this).attr('id') + '"]')
+						.parents('.nav li');
+			parents.addClass('active');
+			parents.siblings().removeClass('active');
 			$(this).addClass('active');
 			$(this).siblings().removeClass('active');
 			$(window).unbind('scroll', activateFirstSection);
@@ -50,11 +54,6 @@ function isScrolledIntoView(elem, complete){
 function scrollToByHash(hash) {
 	hash = hash || document.location.hash;
 	var element = $(hash);
-	var parents = $('[href="' + hash + '"]')
-						.parents('.nav li');
-	
-	parents.addClass('active');
-	parents.siblings().removeClass('active');
 
 	var top = element.offset().top;
 	var padding = parseInt($('#content').css('padding-top'), 10);
