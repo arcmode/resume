@@ -1,5 +1,5 @@
 @import "bootstrap.min.css";
-@import "bootswatch.css";
+@import "bootswatch.min.css";
 @import "bootstrap-responsive.min.css";
 @media (max-width: 979px) {
   .navbar .nav-collapse .nav > li > a,
@@ -135,6 +135,9 @@ footer {
 }
 #go-top a:hover .arrow {
   background-color: #777;
+}
+body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 .page-header {
   border-bottom-color: #d1d1d1;

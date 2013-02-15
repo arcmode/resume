@@ -38,9 +38,7 @@ block content
 	section#contact
 		h3.page-header Contact me
 		p
-			span If you want to send me a message please 
-			strike use this form or
-			span  send me an email to 
+			span If you want to send me a message pleaseuse this form or send me an email to 
 			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
 			span . Also, you can add me to your contacts using 
 			a(href="/images/mecard.png", target="_blank") this QR code
@@ -50,22 +48,26 @@ block content
 				form.form-horizontal.well
 					fieldset
 						legend Contact Form 
-							small(style="color: grey;") coming soon...
 						.control-group
 							label.control-label(for="email") Email
 							.controls
-								input#email.input-large(type="email", required, disabled)
+								input#email.input-large(type="email", required)
+						.control-group
+							label.control-label(for="subject") Subject
+							.controls
+								input#subject.input-large(type="text", required)
 						.control-group
 							label.control-label(for="message") Message
 							.controls
-								textarea#message.input-large(rows="3", required, disabled)
+								textarea#message.input-large(rows="3", required)
 						.form-actions
-							button.btn.btn-primary(type="submit", disabled) Send
+							button.btn.btn-primary(type="submit") Send
 							span &nbsp;&nbsp;
-							button.btn(type="reset", disabled) Cancel
+							button.btn(type="reset") Cancel
 			.span7
 				#map_canvas
 
 block append scripts
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
 	script(src="/javascripts/contactMap.js")
+	script(src="/javascripts/contactForm.js")
