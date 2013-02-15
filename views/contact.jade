@@ -41,8 +41,8 @@ block content
 		p
 			span If you want to send me a message pleaseuse this form or send me an email to 
 			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
-			span . Also, you can add me to your contacts using 
-			a(href="/images/mecard.png", target="_blank") this QR code
+			span . By the way, you can add me to your contacts using 
+			a#qr(href="/images/mecard.png", target="_blank") this QR code
 			span . 
 		.row-fluid
 			#contactForm.span5
@@ -72,3 +72,4 @@ block append scripts
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
 	script(src="/javascripts/contactMap.js")
 	script(src="/javascripts/contactForm.js")
+	script(src="/javascripts/qrModal.js")
