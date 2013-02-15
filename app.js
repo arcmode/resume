@@ -28,10 +28,10 @@ app.configure(function(){
     })
     next();
   });
-  app.use(expressUglify.middleware({
-    src: __dirname + '/public',
-    logLevel: 'info'
-  }));
+  // app.use(expressUglify.middleware({
+  //   src: __dirname + '/public',
+  //   logLevel: 'info'
+  // }));
   app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));

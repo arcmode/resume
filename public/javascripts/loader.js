@@ -5,7 +5,7 @@ var loading = $('#loading');
 
 loading.on('end', function(){
 	loading.remove();
-	resizeMain();
+	$('body').trigger('loaded');
 });
 
 if (referrer !== domain) {
@@ -30,21 +30,16 @@ if (referrer !== domain) {
 
 	$(window).load(function(){
 		loading.fadeOut(600, function(){
-			wrapper.fadeIn(600, function(){
-				loading.trigger('end');
+			loading.trigger('end');
+			wrapper.fadeIn(300, function(){
+				return false
 			});
 		});
 	});
 } else {
 
-	wrapper.show();
-	loading.trigger('end');
+	$(document).ready(function(){
+		wrapper.show();
+		loading.trigger('end');
+	});
 }
-
-function resizeMain(){
-	var main = $('#main'),
-		h = $(document).height(),
-		o = main.offset().top,
-		f = $('footer').height();
-	main.height(h-o-f);
-};
