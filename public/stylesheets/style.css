@@ -50,6 +50,7 @@
   background-color: #0380ff;
 }
 #menu ul.nav li.dropdown:hover > ul.dropdown-menu {
+  margin-top: 0px;
   display: block;
 }
 #contactForm .form-horizontal .control-label {
