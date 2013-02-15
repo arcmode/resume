@@ -20,9 +20,13 @@
   }
   #content section .page-header i {
     font-size: 100px;
+    right: 10px;
   }
   #content section.active .page-header {
     margin-left: -10px;
+  }
+  #content section.active .page-header i {
+    right: 20px;
   }
 }
 @media (min-width: 979px) {
@@ -35,9 +39,13 @@
   }
   #content section .page-header i {
     font-size: 120px;
+    right: 40px;
   }
   #content section.active .page-header {
     margin-left: -20px;
+  }
+  #content section.active .page-header i {
+    right: 120px;
   }
   #menu .simple {
     display: none;
@@ -160,16 +168,21 @@ body {
   text-decoration: none;
 }
 #content section {
-  padding: 50px 0;
+  padding: 40px 0;
 }
 #content section .page-header {
   position: relative;
+  -webkit-transition: 2s;
+  -moz-transition: 2s;
+  transition: 2s;
 }
 #content section .page-header i {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
   position: absolute;
   top: -20px;
-  right: 40px;
-  color: #00e79b;
+  color: #786ef4;
   opacity: 0.1;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
   filter: alpha(opacity=10);
@@ -180,15 +193,13 @@ body {
 #content section p {
   position: relative;
 }
-#content section.active {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  transition: 1s;
-}
-#content section.active .page-header {
-  -webkit-transition: 2s;
-  -moz-transition: 2s;
-  transition: 2s;
+#content section.active .page-header i {
+  color: #00e79b;
+  opacity: 0.3;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  filter: alpha(opacity=30);
+  -moz-opacity: 0.3;
+  -khtml-opacity: 0.3;
 }
 #content section.active .page-header:after {
   content: ' =>';

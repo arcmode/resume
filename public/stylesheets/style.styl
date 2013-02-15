@@ -37,25 +37,29 @@ body
 		&:hover
 			text-decoration none
 	section
-		padding 50px 0
+		// -webkit-transition 1s
+		// -moz-transition 1s
+		// transition 1s
+		padding 40px 0
 		.page-header
 			position relative
+			-webkit-transition 2s
+			-moz-transition 2s
+			transition 2s
 			i
+				-webkit-transition 1s
+				-moz-transition 1s
+				transition 1s
 				position absolute
 				top: -20px
-				right 40px
-				// text-shadow: 1px 1px 1px darken(complementColor, 60%);
-				color: analogicColor
+				color: secondaryBlue
 				opacity 0.1
 		ul, p
 			position relative
 		&.active
-			-webkit-transition 1s
-			-moz-transition 1s
-			transition 1s
 			.page-header
-				-webkit-transition 2s
-				-moz-transition 2s
-				transition 2s
+				i
+					color: analogicColor
+					opacity 0.3
 				&:after
 					content ' =>'
