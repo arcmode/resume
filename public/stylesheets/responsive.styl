@@ -1,10 +1,12 @@
+@import "colors.styl"
+
 @media (max-width: 979px)
 
-	.navbar-inverse .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a
+	.navbar .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a
 		color whitesmoke
 
-	.navbar-inverse .nav-collapse .nav > li:hover
-		background #f00
+	.navbar .nav-collapse .nav > li:hover a
+		background complementColor
 
 	#githubRibbon
 		display none
@@ -19,11 +21,12 @@
 
 	#content
 		section
+			.page-header
+				i
+					font-size 100px
 			&.active
 				.page-header
 					margin-left -10px
-					i
-						font-size 100px
 
 
 @media (min-width: 979px)
@@ -33,11 +36,13 @@
 		section
 			ul, p
 				padding-right: 150px
+			.page-header
+				i
+					font-size 120px
 			&.active
 				.page-header
 					margin-left -20px
-					i
-						font-size 120px
+					
 
 	#menu
 		.simple
