@@ -177,7 +177,7 @@ body {
   -moz-transition: 1s;
   transition: 1s;
   position: absolute;
-  color: #786ef4;
+  color: #0072e6;
   opacity: 0.1;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
   filter: alpha(opacity=10);
@@ -189,7 +189,6 @@ body {
   position: relative;
 }
 #content section.active .page-header i {
-  color: #00e79b;
   opacity: 0.3;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
   filter: alpha(opacity=30);
