@@ -5,7 +5,7 @@ function initialize() {
 	var mapOptions = {
 		zoom: 15,
 		center: myLatlng,
-		mapTypeId: google.maps.MapTypeId.ROADMAP
+		mapTypeId: google.maps.MapTypeId.TERRAIN
 	};
 	map = new google.maps.Map(canvas, mapOptions);
 
@@ -24,7 +24,7 @@ function initialize() {
 	var marker = new google.maps.Marker({
 		position: myLatlng,
 		map: map,
-		title: 'Hello World!'
+		title: 'My home'
 	});
 
 	//- google.maps.event.addListener(marker, 'click', function() {
