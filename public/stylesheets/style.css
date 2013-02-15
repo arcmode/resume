@@ -11,6 +11,9 @@
   #menu .dropdown {
     display: none;
   }
+  #content section {
+    padding: 20px 0;
+  }
   #content section .page-header i {
     font-size: 80px;
     right: 20px;
@@ -23,6 +26,9 @@
 @media (min-width: 979px) {
   #content {
     padding-top: 60px;
+  }
+  #content section {
+    padding: 40px 0;
   }
   #content section ul,
   #content section p {
@@ -56,13 +62,13 @@
   margin-left: 95px;
 }
 #contactForm .form-horizontal .form-actions {
-  padding-left: 95px;
+  padding: 0 0 0 95px;
 }
 #contactForm button {
   padding: 20px 30px;
 }
 #map_canvas {
-  height: 381px;
+  height: 388px;
 }
 html {
   position: relative;
@@ -157,9 +163,6 @@ body {
 }
 #content a:hover {
   text-decoration: none;
-}
-#content section {
-  padding: 40px 0;
 }
 #content section .page-header {
   position: relative;
