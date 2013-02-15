@@ -32,7 +32,7 @@ if (referrer !== domain) {
 		loading.fadeOut(600, function(){
 			loading.trigger('end');
 			wrapper.fadeIn(300, function(){
-				return false
+				return false;
 			});
 		});
 	});

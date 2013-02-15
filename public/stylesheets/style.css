@@ -1,5 +1,4 @@
 @import "bootstrap.min.css";
-@import "bootswatch.min.css";
 @import "bootstrap-responsive.min.css";
 @media (max-width: 979px) {
   .navbar .nav-collapse .nav > li > a,
@@ -46,6 +45,11 @@
   #menu .simple {
     display: none;
   }
+}
+#menu .brand,
+#menu .nav > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #menu ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-top: 0px;
@@ -152,9 +156,6 @@ body {
 .btn-primary:hover {
   background-color: #0072e6;
 }
-* {
-  border: none;
-}
 #content a {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -187,6 +188,9 @@ body {
 #content section ul,
 #content section p {
   position: relative;
+}
+#content section.active .page-header {
+  color: #00e79b;
 }
 #content section.active .page-header i {
   opacity: 0.3;

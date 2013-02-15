@@ -1,5 +1,5 @@
 @import "bootstrap.min.css"
-@import "bootswatch.min.css"
+// @import "bootswatch.min.css"
 // @import "http://bootswatch.com/cerulean/bootstrap.min.css"
 // @import "http://bootswatch.com/slate/bootstrap.min.css"
 // @import "http://bootswatch.com/spacelab/bootstrap.min.css"
@@ -26,9 +26,6 @@ body
 	&:hover
 		background-color baseColor
 
-*
-	border none
-
 #content
 	a
 		-webkit-transition 0.5s
@@ -54,8 +51,8 @@ body
 			position relative
 		&.active
 			.page-header
+				color analogicColor
 				i
-					// color: analogicColor
 					opacity 0.3
 				&:after
 					content ' =>'
