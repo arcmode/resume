@@ -1,13 +1,7 @@
 @import "bootstrap.min.css";
+@import "bootswatch.min.css";
 @import "bootstrap-responsive.min.css";
 @media (max-width: 979px) {
-  .navbar .nav-collapse .nav > li > a,
-  .navbar-inverse .nav-collapse .dropdown-menu a {
-    color: #f5f5f5;
-  }
-  .navbar .nav-collapse .nav > li:hover a {
-    background: #f90;
-  }
   #githubRibbon {
     display: none;
   }
