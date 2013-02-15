@@ -1,0 +1,16 @@
+opacity(n)
+
+	// Good browsers
+	opacity n
+
+	// IE 8 
+	filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
+	// IE 5-7
+	filter: unquote('alpha(opacity=' + round(n * 100) + ')' );
+
+	// Netscape
+	-moz-opacity: n;
+
+	// Safari 1.x 
+	-khtml-opacity: n;

@@ -18,10 +18,29 @@
   #menu .dropdown {
     display: none;
   }
+  #content {
+    padding-top: 60px;
+  }
+  #content section.active .page-header {
+    margin-left: -10px;
+  }
+  #content section.active .page-header i {
+    font-size: 100px;
+  }
 }
 @media (min-width: 979px) {
   #content {
     padding-top: 60px;
+  }
+  #content section.active .page-header {
+    margin-left: -20px;
+  }
+  #content section.active .page-header i {
+    font-size: 120px;
+  }
+  #content section.active ul,
+  #content section.active p {
+    padding-right: 150px;
   }
   #menu .simple {
     display: none;
@@ -29,6 +48,9 @@
 }
 .navbar-inverse .navbar-inner {
   background-color: #0380ff;
+}
+#menu ul.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
 }
 #contactForm .form-horizontal .control-label {
   width: 75px;
@@ -71,7 +93,13 @@ footer {
   font-size: 200%;
 }
 #loading .name {
-  color: #ccc;
+  color: #00e79b;
+}
+#loading #path {
+  color: #f90;
+}
+#loading #hash {
+  color: #0072e6;
 }
 #go-top {
   position: fixed;
@@ -125,16 +153,37 @@ body {
 .btn-primary:hover {
   background-color: #0072e6;
 }
-a {
+* {
+  border: none;
+}
+#content a {
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
   transition: 0.5s;
 }
-a:hover {
+#content a:hover {
   text-decoration: none;
 }
 #content section {
   padding: 50px 0;
+}
+#content section .page-header {
+  position: relative;
+}
+#content section .page-header i {
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  color: #00e79b;
+  opacity: 0.1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  filter: alpha(opacity=10);
+  -moz-opacity: 0.1;
+  -khtml-opacity: 0.1;
+}
+#content section ul,
+#content section p {
+  position: relative;
 }
 #content section.active {
   -webkit-transition: 1s;
@@ -142,7 +191,6 @@ a:hover {
   transition: 1s;
 }
 #content section.active .page-header {
-  margin-left: -20px;
   -webkit-transition: 2s;
   -moz-transition: 2s;
   transition: 2s;

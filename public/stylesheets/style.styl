@@ -9,12 +9,11 @@
 @import "loading.styl"
 @import "go-top.styl"
 
+@import "opacity.styl"
+
 
 body
   	font-family: "Lucida Grande", Helvetica, Arial, sans-serif
-  	// padding-top: 20px
-  	// border-top: 5px solid baseColor
-	// color baseColor
 
 .page-header
 	border-bottom-color lineColor
@@ -24,26 +23,36 @@ body
 	&:hover
 		background-color baseColor
 
-a
-	-webkit-transition 0.5s
-	-moz-transition 0.5s
-	transition 0.5s
-	&:hover
-		text-decoration none
+*
+	border none
 
 #content
+	a
+		-webkit-transition 0.5s
+		-moz-transition 0.5s
+		transition 0.5s
+		&:hover
+			text-decoration none
 	section
 		padding 50px 0
+		.page-header
+			position relative
+			i
+				position absolute
+				top: -20px
+				right 40px
+				// text-shadow: 1px 1px 1px darken(complementColor, 60%);
+				color: analogicColor
+				opacity 0.1
+		ul, p
+			position relative
 		&.active
 			-webkit-transition 1s
 			-moz-transition 1s
 			transition 1s
 			.page-header
-				margin-left -20px
 				-webkit-transition 2s
 				-moz-transition 2s
 				transition 2s
 				&:after
 					content ' =>'
-				// &:before
-				// 	content '> '

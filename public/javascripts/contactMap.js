@@ -14,7 +14,7 @@ function initialize() {
 		'<br>' +
 		'<small>Marcoleta 594, Depto 9, Santiago</small>'+
 		'<br>' +
-		'<small>T: <a href="tel:56987322336">09 873 22 336</a></small>';
+		'<i class="icon-mobile-phone icon-large"><i/> <small><a href="tel:56987322336">09 873 22 336</a></small>';
 
 	var infowindow = new google.maps.InfoWindow({
 		content: contentString,

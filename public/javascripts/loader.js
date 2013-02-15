@@ -11,10 +11,12 @@ loading.on('end', function(){
 if (referrer !== domain) {
 
 	var path = $('<small/>', {
+		'id': 'path',
 		'html': window.location.pathname === '/'? '/resume': window.location.pathname
 	}).appendTo(loading);
 
 	var hash = $('<small/>', {
+		'id': 'hash',
 		'html': window.location.hash
 	}).appendTo(loading);
 
