@@ -18,9 +18,6 @@
   #menu .dropdown {
     display: none;
   }
-  #content {
-    padding-top: 60px;
-  }
   #content section.active .page-header {
     margin-left: -10px;
   }
@@ -32,15 +29,15 @@
   #content {
     padding-top: 60px;
   }
+  #content section ul,
+  #content section p {
+    padding-right: 150px;
+  }
   #content section.active .page-header {
     margin-left: -20px;
   }
   #content section.active .page-header i {
     font-size: 120px;
-  }
-  #content section.active ul,
-  #content section.active p {
-    padding-right: 150px;
   }
   #menu .simple {
     display: none;
