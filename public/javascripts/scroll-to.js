@@ -32,14 +32,19 @@ function activateFirstSection(){
 	});
 };
 
-function isScrolledIntoView(elem){
+function isScrolledIntoView(elem, complete){
+	complete = complete || false;
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
 
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height();
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    if (complete) {
+    	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    } else {
+    	return (elemTop >= docViewTop);
+    }
 };
 
 function scrollToByHash(hash) {
