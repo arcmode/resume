@@ -1,4 +1,4 @@
-#menu.navbar.navbar-fixed-top
+#superbar.navbar.navbar-fixed-top
 	.navbar-inner
 		.container
 			a.btn.btn-navbar(
@@ -12,33 +12,8 @@
 			.nav-collapse
 				ul.nav
 					block navResume
-						li.simple.active
+						li
 							a(href="/") Resume
-						li.dropdown
-							a.dropdown-toggle(
-								href='#',
-								data-toggle='dropdown')
-								| Resume 
-								b.caret
-							ul.dropdown-menu.scroll-to
-								li
-									a(href="#interests") Interests
-								li
-									a(href="#skills") Skills
-								li
-									a(href="#programming") Programming languages
-								li
-									a(href="#databases") Databases
-								li
-									a(href="#education") Education
-								li
-									a(href="#publications") Publications
-								li
-									a(href="#experience") Work experience
-								li
-									a(href="#languages") Human languages
-
-					li.divider
 					block navContact
 						li
 							a(href="/contact") Contact

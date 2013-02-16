@@ -15,11 +15,10 @@
 		.text
 			display none
 
-	#menu
-		.dropdown
-			display none
-
 	#content
+		#sidebar
+			padding-top 20px
+			position static
 		section
 			padding 20px 0
 			.page-header
@@ -28,15 +27,17 @@
 					right 20px
 					top -10px
 
-			&.active
-				.page-header
-					margin-left -10px
-
 
 @media (min-width: 979px)
 
 	#content
 		padding-top 60px
+		#sidebar
+			padding-top 60px
+			li
+				&.active
+					a
+						margin-left -10px
 		section
 			padding 40px 0
 			ul, p
@@ -46,11 +47,3 @@
 					font-size 100px
 					right 40px
 					top -20px
-			&.active
-				.page-header
-					margin-left -20px
-					
-
-	#menu
-		.simple
-			display none

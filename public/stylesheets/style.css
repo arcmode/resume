@@ -8,8 +8,9 @@
   #go-top .text {
     display: none;
   }
-  #menu .dropdown {
-    display: none;
+  #content #sidebar {
+    padding-top: 20px;
+    position: static;
   }
   #content section {
     padding: 20px 0;
@@ -19,13 +20,16 @@
     right: 20px;
     top: -10px;
   }
-  #content section.active .page-header {
-    margin-left: -10px;
-  }
 }
 @media (min-width: 979px) {
   #content {
     padding-top: 60px;
+  }
+  #content #sidebar {
+    padding-top: 60px;
+  }
+  #content #sidebar li.active a {
+    margin-left: -10px;
   }
   #content section {
     padding: 40px 0;
@@ -39,21 +43,20 @@
     right: 40px;
     top: -20px;
   }
-  #content section.active .page-header {
-    margin-left: -20px;
-  }
-  #menu .simple {
-    display: none;
-  }
 }
-#menu .brand,
-#menu .nav > li > a {
+#superbar .navbar-inner .brand,
+#superbar .navbar-inner .nav > li > a {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-#menu ul.nav li.dropdown:hover > ul.dropdown-menu {
+#superbar .navbar-inner ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-top: 0px;
   display: block;
+}
+#sidebar li.active a,
+#sidebar li:hover a {
+  background-color: #73b8ff;
+  color: #fff;
 }
 #contactForm .form-horizontal .control-label {
   width: 75px;

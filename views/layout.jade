@@ -11,6 +11,12 @@ html
 			#main.container
 				#content
 					block content
+						.row
+							.span3
+								block sidebar
+									include includes/sidebar
+							.span9
+								block main
 		include includes/footer
 		include includes/loading
 		include includes/githubRibbon
@@ -22,5 +28,6 @@ html
 		script(src="/javascripts/sectionIcons.js")
 		script(src="/javascripts/scroll-to.js")
 		script(src="/javascripts/go-top.js")
+		script(src="/javascripts/sidebar.js")
 		script(src="/javascripts/bootstrap.min.js")
 		script(src="/javascripts/bootstrap-modalize.js")
