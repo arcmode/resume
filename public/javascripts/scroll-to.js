@@ -19,7 +19,7 @@ $('body').on('loaded', function(){
 
 setInterval(function(){
 	$(window).bind('scroll', activateFirstSection);
-}, 33);
+}, 22);
 
 function activateFirstSection(){
 	$('section').each(function(index){
