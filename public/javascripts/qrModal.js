@@ -3,7 +3,10 @@ $(document).ready(function(){
 	qr.click(function(e){
 		e.preventDefault();
 		var modal = qr.modalize({
-			title: 'Add me to your contacts',
+			title: $('<i/>', {
+				'class': 'icon-mobile-phone',
+				'html': ' My contact data'
+			}),
 			body: $('<img/>', {
 				'src': qr.attr('href'),
 				'alt': 'My contact info in QR format',

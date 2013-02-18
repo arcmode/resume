@@ -78,7 +78,6 @@ a.tele { /*turn off telephone link on desktop */
 	text-decoration: none; 
 	cursor:text; 
 	pointer-events: none; 
-	color:inherit!important;
 }
 
 /* Typography Resets & Settings
@@ -1737,6 +1736,7 @@ body {
 /*** Turn ON telephone max-width 600px 
 ================================================== */
 a.tele {
+	text-decoration: underline;
     cursor: pointer;
     pointer-events: visible;
 }

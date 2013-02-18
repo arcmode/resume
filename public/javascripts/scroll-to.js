@@ -23,7 +23,6 @@ setInterval(function(){
 
 function activateFirstSection(){
 	$('section').each(function(index){
-		if (isScrolledIntoView(this)) {
 			var parents = $('[href="' + '#' + $(this).attr('id') + '"]')
 						.parents('.nav li');
 			parents.addClass('active');

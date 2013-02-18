@@ -5,57 +5,69 @@ block navContact
 		a(href="/contact") Contact
 
 block sidebar
-	ul#sidebar.nav.nav-pills.nav-stacked.affix
-		li
-			a(href="/#interests") Interests
-		li
-			a(href="/#skills") Skills
-		li
-			a(href="/#programming") Programming languages
-		li
-			a(href="/#databases") Databases
-		li
-			a(href="/#education") Education
-		li
-			a(href="/#publications") Publications
-		li
-			a(href="/#experience") Work experience
-		li
-			a(href="/#languages") Human languages
+	li
+		a(href="#form") Email
+	li
+		a(href="#data") Contact data
+	li
+		a(href="#location") Location
 
-block content
-	section#contact
+block main
+	section#form
 		h3.page-header
-			span.section-title Contact
+			span.section-title Email
 		p
-			span If you want to send me a message pleaseuse this form or send me an email to 
+			span You can use the form below or send me an email to 
 			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
-			span . By the way, you can add me to your contacts using 
+			span .
+
+		#contactForm
+			form.form-horizontal
+				fieldset
+					legend Contact form
+					.control-group
+						label.control-label(for="email") Email
+						.controls
+							input#email.input-large(type="email", required)
+					.control-group
+						label.control-label(for="subject") Subject
+						.controls
+							input#subject.input-large(type="text", required)
+					.control-group
+						label.control-label(for="message") Message
+						.controls
+							textarea#message.input-large(rows="3", required)
+					.form-actions
+						button.btn.btn-success(type="submit") Send
+						| &nbsp;&nbsp;
+						button.btn(type="reset") Cancel
+	section#data
+		h3.page-header
+			span.section-title Contact data
+		address
+			strong David Antonio Rojas Camaggi
+			br
+			| Marcoleta 594, Depto. 9
+			br
+			| Santiago de Chile
+			br
+			| Tel: 
+			a.tele(href="tel:56987322336") +56 (9) 873 22 336
+			br
+			| Email: 
+			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
+
+
+		p
+			span By the way, you can add me to your contacts using 
 			a#qr(href="/images/mecard.png", target="_blank") this QR code
 			span . 
-		.row-fluid
-			#contactForm.span5
-				form.form-horizontal.well
-					fieldset
-						legend Email me 
-						.control-group
-							label.control-label(for="email") Email
-							.controls
-								input#email.input-large(type="email", required)
-						.control-group
-							label.control-label(for="subject") Subject
-							.controls
-								input#subject.input-large(type="text", required)
-						.control-group
-							label.control-label(for="message") Message
-							.controls
-								textarea#message.input-large(rows="3", required)
-						.form-actions
-							button.btn.btn-success(type="submit") Send
-							span &nbsp;&nbsp;
-							button.btn(type="reset") Cancel
-			.span7
-				#map_canvas
+
+	section#location
+		h3.page-header
+			span.section-title Location
+		p This is where I live, downtown Santiago de Chile.
+		#map_canvas
 
 block append scripts
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")

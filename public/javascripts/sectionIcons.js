@@ -7,7 +7,9 @@ var mapping = {
 	'publications': 'icon-paper-clip',
 	'experience': 'icon-briefcase',
 	'languages': 'icon-comment',
-	'contact': 'icon-envelope'
+	'form': 'icon-envelope',
+	'data': 'icon-qrcode',
+	'location': 'icon-map-marker'
 };
 
 $(document).ready(function() {
@@ -16,6 +18,7 @@ $(document).ready(function() {
 		var section = $(this);
 		var icon = $('<i/>', {
 			'class': mapping[section.attr('id')]
+			, 'style': 'font-size:' + section.height() + 'px'
 		}).appendTo(section.find('.page-header'));
 	});
 });

@@ -30,9 +30,8 @@ if (referrer !== domain) {
 
 	$(window).load(function(){
 		loading.fadeOut(600, function(){
-			loading.trigger('end');
 			wrapper.fadeIn(300, function(){
-				return false;
+				loading.trigger('end');
 			});
 		});
 	});

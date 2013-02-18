@@ -16,7 +16,6 @@
     padding: 20px 0;
   }
   #content section .page-header i {
-    font-size: 80px;
     top: -10px;
   }
   #content section.active .page-header i {
@@ -41,7 +40,6 @@
     padding-right: 150px;
   }
   #content section .page-header i {
-    font-size: 100px;
     top: -20px;
   }
   #content section.active .page-header i {
@@ -189,6 +187,7 @@ body {
   -moz-opacity: 0;
   -khtml-opacity: 0;
   right: -200px;
+  z-index: -1;
 }
 #content section ul,
 #content section p {
@@ -198,11 +197,11 @@ body {
   color: #00e79b;
 }
 #content section.active .page-header i {
-  opacity: 0.3;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-  filter: alpha(opacity=30);
-  -moz-opacity: 0.3;
-  -khtml-opacity: 0.3;
+  opacity: 0.2;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
+  filter: alpha(opacity=20);
+  -moz-opacity: 0.2;
+  -khtml-opacity: 0.2;
 }
 #content section.active .page-header:after {
   content: ' =>';
