@@ -1,11 +1,3 @@
-$(document).ready(function(){
-	$('.scroll-to a').click(function (e) {
-		e.preventDefault();
-		var href = $(this).attr('href');
-		scrollToByHash(href);
-	});
-});
-
 $('body').on('loaded', function(){
 	var href = document.location && document.location.hash;
 	if (href) {
@@ -16,19 +8,31 @@ $('body').on('loaded', function(){
 	}
 });
 
+$('.scroll-to a').click(function() {
+	var href = $(this).attr('href');
+	scrollToByHash(href);
+	return false;
+});
 
-setInterval(function(){
-	$(window).bind('scroll', activateFirstSection);
-}, 22);
+
+$(document).ready(function(){
+	setInterval(function(){
+		$(window).bind('scroll', activateFirstSection);
+		setTimeout(function(){
+			$(window).unbind('scroll', activateFirstSection);
+		}, 2);
+	}, 20);
+});
 
 function activateFirstSection(){
-	$('section').each(function(index){
-			var parents = $('[href="' + '#' + $(this).attr('id') + '"]')
+	$('section').each(function(index, section){
+		if (isScrolledIntoView(section)) {
+			var parents = $('[href="' + '#' + $(section).attr('id') + '"]')
 						.parents('.nav li');
 			parents.addClass('active');
 			parents.siblings().removeClass('active');
-			$(this).addClass('active');
-			$(this).siblings().removeClass('active');
+			$(section).addClass('active');
+			$(section).siblings().removeClass('active');
 			$(window).unbind('scroll', activateFirstSection);
 			return false;
 		}
@@ -57,7 +61,11 @@ function scrollToByHash(hash) {
 	var top = element.offset().top;
 	var padding = parseInt($('#content').css('padding-top'), 10);
 
+	if ($('body').scrollTop() === 0) {
+		activateFirstSection();
+	}
+
 	$('body,html').animate({
 		scrollTop: top - padding
-	}, 800);
+	}, 800, function(){ window.location.hash = hash; });
 };
