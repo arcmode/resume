@@ -11,30 +11,37 @@ var express = require('express')
 
 var app = express();
 
+app.configure('production', function(){
+  app.use(expressUglify.middleware({
+    src: __dirname + '/public'
+    , logLevel: 'error'
+  }));
+});
+
+app.configure('development', function(){
+  app.use(expressUglify.middleware({
+    src: __dirname + '/public'
+    , logLevel: 'info'
+  }));
+});
+
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon(__dirname + '/public/images/favicon.ico'));
   app.use(express.logger('dev'));
+  app.use(require('stylus').middleware(__dirname + '/public'));
+  app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(express.cookieParser('your secret here'));
-  app.use(express.session());
   app.use(function(req, res, next){
     app.locals({
-      title: 'David Rojas Camaggi',
-      welcome: 'Welcome to my personal website'
+      title: 'David Rojas Camaggi'
     })
     next();
   });
-  // app.use(expressUglify.middleware({
-  //   src: __dirname + '/public',
-  //   logLevel: 'info'
-  // }));
   app.use(app.router);
-  app.use(require('stylus').middleware(__dirname + '/public'));
-  app.use(express.static(path.join(__dirname, 'public')));
 });
 
 app.configure('development', function(){
