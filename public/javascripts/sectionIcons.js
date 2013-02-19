@@ -9,10 +9,12 @@ var mapping = {
 	'languages': 'icon-comment',
 	'form': 'icon-envelope',
 	'data': 'icon-qrcode',
-	'location': 'icon-map-marker'
+	'location': 'icon-map-marker',
+	'bio': 'icon-user',
+	'this': 'icon-desktop'
 };
 
-$(document).ready(function() {
+$('body').on('loaded', function() {
 	var sections = $('section');
 	sections.each(function(index){
 		var section = $(this);

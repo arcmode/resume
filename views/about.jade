@@ -1,0 +1,57 @@
+extends layout
+
+block navAbout
+	li.active
+		a(href="/about") About
+
+block sidebar
+	li
+		a(href="#bio") Bio
+	li
+		a(href="#this") This
+
+block main
+	section#bio
+		h3.page-header
+			| Bio
+		p
+			| Since I was a Biology student at the University of Chile 
+			| one of my primary interests is the programatic study of 
+			| living sistems and systems theory.
+
+		p
+			| Computers and electronics where always around during my 
+			| formation as a scientist and at some point I felt more 
+			| interested about the devices and software used in the lab
+			| than the organisms being studied.
+
+	section#this
+		h3.page-header
+			| This
+
+		p
+			| The application serving this page is powered by:
+
+		ul.nav.nav-list
+			li
+				strong
+					a(href="http://nodejs.org") Node.js
+			li
+				strong
+					a(href="http://expressjs.org") Express.js
+			li
+				strong
+					a(href="http://nodejitsu.com") Nodejitsu
+			li
+				strong
+					a(href="http://getbootstrap.com") Twitter Bootstrap
+			li
+				strong
+					a(href="http://sublimetext.com") Sublime Text 2
+			li
+				strong
+					a(href="http://font-awesome.com") Font Awesome
+			li
+				strong
+					a(href="http://osx.com") OSX
+
