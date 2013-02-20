@@ -6,11 +6,43 @@ block navAbout
 
 block sidebar
 	li
-		a(href="#bio") Bio
+		a(href="#this") About this
 	li
-		a(href="#this") This
+		a(href="#bio") Bio
 
 block main
+
+	section#this
+		h3.page-header
+			| About this
+
+		p
+			| Powered by:
+
+		ul.nav.nav-list
+			li
+				strong
+					a(href="http://nodejs.org") Node.js
+						| / 
+						small JavaScript evented IO
+			li
+				strong
+					a(href="http://expressjs.org") Express.js
+						| / 
+						small Node JS
+			li
+				strong
+					a(href="http://nodejitsu.com") Nodejitsu
+			li
+				strong
+					a(href="http://getbootstrap.com") Twitter Bootstrap
+			li
+				strong
+					a(href="http://sublimetext.com") Sublime Text 2
+			li
+				strong
+					a(href="http://font-awesome.com") Font Awesome
+
 	section#bio
 		h3.page-header
 			| Bio
@@ -24,34 +56,4 @@ block main
 			| formation as a scientist and at some point I felt more 
 			| interested about the devices and software used in the lab
 			| than the organisms being studied.
-
-	section#this
-		h3.page-header
-			| This
-
-		p
-			| The application serving this page is powered by:
-
-		ul.nav.nav-list
-			li
-				strong
-					a(href="http://nodejs.org") Node.js
-			li
-				strong
-					a(href="http://expressjs.org") Express.js
-			li
-				strong
-					a(href="http://nodejitsu.com") Nodejitsu
-			li
-				strong
-					a(href="http://getbootstrap.com") Twitter Bootstrap
-			li
-				strong
-					a(href="http://sublimetext.com") Sublime Text 2
-			li
-				strong
-					a(href="http://font-awesome.com") Font Awesome
-			li
-				strong
-					a(href="http://osx.com") OSX
 
