@@ -1,13 +1,6 @@
 @import "colors.styl"
-@import "opacity.styl"
 
 @media (max-width: 979px)
-
-	// .navbar .nav-collapse .nav > li > a, .navbar-inverse .nav-collapse .dropdown-menu a
-	// 	color whitesmoke
-
-	// .navbar .nav-collapse .nav > li:hover a
-	// 	background complementColor
 
 	#githubRibbon
 		display none
@@ -28,9 +21,13 @@
 						right 10px
 
 
-
-
 @media (min-width: 979px)
+
+	#superbar
+		.navbar-inner
+			.brand, .nav > li > a
+				padding-top 14px
+				padding-bottom 14px
 
 	#content
 		padding-top 60px

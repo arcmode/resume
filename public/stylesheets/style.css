@@ -20,6 +20,11 @@
   }
 }
 @media (min-width: 979px) {
+  #superbar .navbar-inner .brand,
+  #superbar .navbar-inner .nav > li > a {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
   #content {
     padding-top: 60px;
   }
@@ -42,11 +47,6 @@
 }
 #superbar .navbar-inner .brand i {
   color: #73b8ff;
-}
-#superbar .navbar-inner .brand,
-#superbar .navbar-inner .nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 #superbar .navbar-inner ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-top: 0px;
