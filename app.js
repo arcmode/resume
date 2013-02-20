@@ -37,7 +37,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(function(req, res, next){
     app.locals({
-      title: 'David Rojas Camaggi'
+      title: 'drojas'
     })
     next();
   });

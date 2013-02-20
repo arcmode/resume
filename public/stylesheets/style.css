@@ -40,6 +40,9 @@
     right: 40px;
   }
 }
+#superbar .navbar-inner .brand i {
+  color: #73b8ff;
+}
 #superbar .navbar-inner .brand,
 #superbar .navbar-inner .nav > li > a {
   padding-top: 15px;
