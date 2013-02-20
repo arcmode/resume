@@ -15,9 +15,6 @@
   #content section {
     padding: 20px 0;
   }
-  #content section .page-header i {
-    top: -10px;
-  }
   #content section.active .page-header i {
     right: 10px;
   }
@@ -38,9 +35,6 @@
   #content section ul,
   #content section p {
     padding-right: 150px;
-  }
-  #content section .page-header i {
-    top: -20px;
   }
   #content section.active .page-header i {
     right: 40px;
