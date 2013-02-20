@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var qr = $('#qr');
 	qr.click(function(e){
 		e.preventDefault();
-		var modal = qr.modalize({
+		var modal = createModal({
 			title: $('<i/>', {
 				'class': 'icon-mobile-phone',
 				'html': ' My contact data'
@@ -12,10 +12,9 @@ $(document).ready(function(){
 				'alt': 'My contact info in QR format',
 				'style': 'margin: 0 auto; width: 75%; height: 75%;'
 			}),
-			overflow: 'hidden'
+			overflow: 'hidden',
+			autodestroy: true
+
 		}).modal();
-		modal.on('hidden', function(){
-			$(this).remove();
-		});
 	});
 });

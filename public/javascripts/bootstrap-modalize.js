@@ -1,8 +1,3 @@
-$.fn.modalize = function(options){
-	var modal = createModal(options);
-	return modal;
-};
-
 function createModal(options){
 
 	options = options || {};
@@ -11,6 +6,7 @@ function createModal(options){
 	var body = options && options.body;
 	var overflow = options && options.overflow;
 	var action = options && options.action;
+	var autodestroy = options && options.autodestroy;
 
 	var modal = $('<div/>', {
 		'class': 'modal hide fade'
@@ -65,6 +61,12 @@ function createModal(options){
 			'class': 'btn btn-info',
 			'html': action
 		}).appendTo(modalFooter);
+	}
+
+	if (autodestroy) {
+		modal.on('hidden', function(){
+			modal.remove();
+		});
 	}
 
 	return modal;
