@@ -10,12 +10,6 @@ var express = require('express')
   , path = require('path')
   , expressUglify = require('express-uglify');
 
-var RedisStore = require('socket.io/lib/stores/redis')
-  , redis  = require('socket.io/node_modules/redis')
-  , pub    = redis.createClient()
-  , sub    = redis.createClient()
-  , client = redis.createClient();
-
 var app = express();
 
 var config = require('./config');
@@ -68,12 +62,6 @@ var server = http.createServer(app).listen(app.get('port'), function() {
 });
 
 var io = socketio.listen(server);
-
-io.set('store', new RedisStore({
-  redisPub : pub
-, redisSub : sub
-, redisClient : client
-}));
 
 io
   .of('/chat')
