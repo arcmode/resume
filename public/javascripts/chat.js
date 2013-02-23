@@ -11,7 +11,6 @@ $('body').on('loaded', function(){
 	var name;
 
 	initSocket();
-	initChat();
 
 	function sendMessage(event){
 		event.preventDefault();
@@ -37,10 +36,18 @@ $('body').on('loaded', function(){
 
 	function initSocket(){
 		socket.on('successful connection', function () {
-			console.log('connected');
+			join
+				.addClass('btn-info')
+				.removeClass('btn-danger disabled')
+				.html('Join');
+			initChat();
 		});
 		socket.on('disconnect', function () {
-			console.log('disconnected');
+			join
+				.removeClass('btn-info')
+				.addClass('btn-danger disabled')
+				.html('Unavailable');
+			endChat();
 		});
 		socket.on('message', function (data) {
 			appendMessage(data.from + ': ' + data.message);
@@ -49,11 +56,11 @@ $('body').on('loaded', function(){
 			joinChat(null, data.message);
 		});
 		socket.on('accepted', function (data) {
-			appendMessage(data.name + ' > ' + data.message);
+			appendMessage(data.message + ' as ' + data.name);
 			enableChat();
 		});
 		socket.on('unregistered', function(data) {
-			appendMessage(data.name + ' > ' + data.message);
+			appendMessage(data.name + ', ' + data.message);
 			disableChat();
 		});
 		socket.on('restricted name', function(data) {
@@ -62,8 +69,17 @@ $('body').on('loaded', function(){
 	};
 
 	function appendMessage(message) {
-		$('<li/>', { 'html': message })
-				.appendTo(messages);
+		var td = $('<td/>', { 'html': message }),
+			tr = $('<tr/>', { 'html': td })
+				.appendTo(messages.find('tbody'));
+	};
+
+	function endChat(){
+		join.unbind('click');
+		chat
+			.find('input, button')
+			.not('#join')
+			.attr('disabled', 'disabled');
 	};
 
 	function initChat(){

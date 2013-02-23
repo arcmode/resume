@@ -10,7 +10,7 @@ var mapping = {
 	'form': 'icon-envelope',
 	'data': 'icon-qrcode',
 	'location': 'icon-map-marker',
-	'bio': 'icon-user',
+	'me': 'icon-user',
 	'this': 'icon-desktop',
 	'chat': 'icon-comments'
 };

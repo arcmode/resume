@@ -12,16 +12,15 @@ block sidebar
 	li
 		a(href="#location") Location
 	li
-		a(href="#chat") Chat
+		a(href="#chat") Chat with me
 
 block main
 	section#form
-		h3.page-header
-			| Email
+		h3.page-header Email
 		p
 			span You can use the form below or send me an email to 
 			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
-			span .
+			span . (The form will trigger your own mailer)
 
 		#contactForm
 			form.form-horizontal
@@ -44,8 +43,7 @@ block main
 						| &nbsp;&nbsp;
 						button.btn(type="reset") Cancel
 	section#data
-		h3.page-header
-			| Contact data
+		h3.page-header Contact data
 		address
 			strong David Antonio Rojas Camaggi
 			br
@@ -66,26 +64,27 @@ block main
 			span . 
 
 	section#location
-		h3.page-header
-			| Location
+		h3.page-header Location
 		p This is where I live, downtown Santiago de Chile.
 		#map_canvas
 
 	section#chat
-		h3.page-header
-			| Chat
+		h3.page-header Chat with me
 		#room
-			button#join.btn.btn-info Join
-			ul#messages
+			table#messages.table.table-condensed
+				thead
+					tr#status
+						th
+							button#join.btn.btn-danger.disabled Unavailable
+				tbody
 			form.form-inline
 				input(type="text", placeholder="type your message...", disabled)
 				| &nbsp;&nbsp;
 				button.btn.btn-success(type="submit", disabled) Send
-			
 
 block append scripts
-	//- script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
-	//- script(src="/javascripts/contactMap.js")
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+	script(src="/javascripts/contactMap.js")
 	script(src="/javascripts/contactForm.js")
 	script(src="/javascripts/qrModal.js")
 	script(src="/socket.io/socket.io.js")
