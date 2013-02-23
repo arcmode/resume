@@ -1,5 +1,6 @@
 $('body').on('loaded', function(){
-	var socket = io.connect("http://localhost:3000/chat");
+	var HOST = window.location.host,
+		socket = io.connect("http://" + HOST + '/chat');
 
 	var chat = $('#chat'),
 		messages = $('#messages');

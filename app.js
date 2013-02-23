@@ -3,6 +3,8 @@
  * Module dependencies.
  */
 
+var os = require('os');
+
 var express = require('express')
   , socketio = require('socket.io')
   , routes = require('./routes')
@@ -22,12 +24,15 @@ app.configure('production', function() {
 });
 
 app.configure('development', function() {
-  if (!process.env.NOCOMPRESS) {
+  app.use(function(req, res, next){
+    if (!process.env.NOCOMPRESS) {
       app.use(expressUglify.middleware({
-      src: __dirname + '/public'
-      , logLevel: 'info'
-    }));
-  }
+        src: __dirname + '/public'
+        , logLevel: 'info'
+      }));
+    }
+    next();
+  })
 });
 
 app.configure(function(){
@@ -41,9 +46,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(function(req, res, next){
-    app.locals({
-      title: 'drojas'
-    })
+    app.locals.title = 'drojas';
     next();
   });
   app.use(app.router);
