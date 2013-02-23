@@ -70,12 +70,12 @@ block main
 
 	section#chat
 		h3.page-header Chat with me
+		p
+			span#server-status.off Server status:
+			span#admin-status.off Admin is online?:
 		#room
+			button#join.btn.btn-danger.disabled Unavailable
 			table#messages.table.table-condensed
-				thead
-					tr#status
-						th
-							button#join.btn.btn-danger.disabled Unavailable
 				tbody
 			form.form-inline
 				input(type="text", placeholder="type your message...", disabled)

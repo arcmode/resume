@@ -69,16 +69,35 @@
 #contactForm button {
   padding: 20px 30px;
 }
+#chat #server-status,
+#chat #admin-status {
+  margin-right: 10px;
+}
+#chat #server-status:after,
+#chat #admin-status:after {
+  content: " \f111";
+  font-family: FontAwesome;
+}
+#chat #server-status.on:after,
+#chat #admin-status.on:after {
+  color: #00e79b;
+}
+#chat #server-status.off:after,
+#chat #admin-status.off:after {
+  color: #f90;
+}
 #chat #room {
   border: 1px solid #dfdfdf;
   padding: 20px;
   position: relative;
 }
-#chat #room #messages {
-  margin-left: 0;
-  min-height: 100px;
-  max-height: 150px;
-  overflow-y: auto;
+#chat #room #join {
+  margin: 10px 0;
+}
+#chat #room #messages .fake,
+#chat #room #messages .from {
+  width: 75px;
+  font-weight: bold;
 }
 #map_canvas {
   height: 388px;

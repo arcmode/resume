@@ -10,15 +10,28 @@
 		padding 20px 30px
 
 #chat
+	#server-status, #admin-status
+		margin-right 10px
+		&:after
+			content " \f111"
+			font-family FontAwesome
+		&.on
+			&:after
+				color analogicColor
+		&.off
+			&:after
+				color complementColor
+			
 	#room
 		border 1px solid lighten(greyColor, 75%)
 		padding 20px
 		position relative
+		#join
+			margin 10px 0
 		#messages
-			margin-left 0
-			min-height 100px
-			max-height 150px
-			overflow-y auto
+			.fake, .from
+				width 75px
+				font-weight bold
 
 #map_canvas
 	height 388px
