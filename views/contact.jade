@@ -11,6 +11,8 @@ block sidebar
 		a(href="#data") Contact data
 	li
 		a(href="#location") Location
+	li
+		a(href="#chat") Chat
 
 block main
 	section#form
@@ -69,8 +71,22 @@ block main
 		p This is where I live, downtown Santiago de Chile.
 		#map_canvas
 
+	section#chat
+		h3.page-header
+			| Chat
+		#room
+			button#join.btn.btn-info Join
+			ul#messages
+			form.form-inline
+				input(type="text", placeholder="type your message...", disabled)
+				| &nbsp;&nbsp;
+				button.btn.btn-success(type="submit", disabled) Send
+			
+
 block append scripts
-	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
-	script(src="/javascripts/contactMap.js")
+	//- script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+	//- script(src="/javascripts/contactMap.js")
 	script(src="/javascripts/contactForm.js")
 	script(src="/javascripts/qrModal.js")
+	script(src="/socket.io/socket.io.js")
+	script(src="/javascripts/chat.js")

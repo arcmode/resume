@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "3.1",
+    "socket.io": "0.9",
     "jade": "*",
     "stylus": "*",
     "express-uglify": "0.3"

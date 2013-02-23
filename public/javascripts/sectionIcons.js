@@ -11,7 +11,8 @@ var mapping = {
 	'data': 'icon-qrcode',
 	'location': 'icon-map-marker',
 	'bio': 'icon-user',
-	'this': 'icon-desktop'
+	'this': 'icon-desktop',
+	'chat': 'icon-comments'
 };
 
 $('body').on('loaded', function() {

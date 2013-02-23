@@ -69,6 +69,17 @@
 #contactForm button {
   padding: 20px 30px;
 }
+#chat #room {
+  border: 1px solid #dfdfdf;
+  padding: 20px;
+  position: relative;
+}
+#chat #room #join {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
 #map_canvas {
   height: 388px;
 }
@@ -186,7 +197,8 @@ body {
   right: -200px;
 }
 #content section ul,
-#content section p {
+#content section p,
+#content section form {
   position: relative;
 }
 #content section.active .page-header {
