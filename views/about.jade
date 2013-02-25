@@ -7,7 +7,7 @@ block navAbout
 block sidebar
 	li
 		a(href="#this") About this page
-	li
+	li#to-me.hide.fade
 		a(href="#me") About me
 
 block main
@@ -45,6 +45,11 @@ block main
 					small Text editor for code
 			li
 				strong
+					a(href="http://jquery.com/", target="_blank") jQuery
+					| / 
+					small Feature-rich JavaScript library
+			li
+				strong
 					a(href="http://getbootstrap.com/", target="_blank") Twitter Bootstrap
 					| / 
 					small Front-end framework
@@ -54,7 +59,7 @@ block main
 					| /
 					small The iconic font for Twitter Bootstrap
 
-	section#me
+	section#me.hide.fade
 		h3.page-header About me
 		p
 			| When I was a Biology student at the University of Chile 
@@ -78,3 +83,6 @@ block main
 		p
 			| I still love biology, so maybe some day I'll do science again. 
 			| If so, I just know it will be related to programming.
+
+block append scripts
+	script(src="/javascripts/easter-egg-me.js")

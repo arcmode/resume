@@ -47,6 +47,9 @@
 }
 #superbar .navbar-inner .brand i {
   color: #73b8ff;
+  margin-right: 5px;
+  width: 16px;
+  height: 20px;
 }
 #superbar .navbar-inner ul.nav li.dropdown:hover > ul.dropdown-menu {
   margin-top: 0px;
