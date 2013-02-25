@@ -29,17 +29,19 @@ $('body').on('loaded', function(){
 
 	function initSocket(){
 		$(document).bind('keydown', 'ctrl+i', function(){
-			join
-				.removeClass('btn-danger disabled')
-				.addClass('btn-info')
-				.html('Join')
-				.unbind('click')
-				.bind('click', function(){
-					name = prompt('What\'s your name?');
-					if (name) {
-						socket.emit('register', name);
-					}
-				});
+			if (join.hasClass('disabled')) {
+				join
+					.removeClass('btn-danger disabled')
+					.addClass('btn-info')
+					.html('Join')
+					.unbind('click')
+					.bind('click', function(){
+						name = prompt('What\'s your name?');
+						if (name) {
+							socket.emit('register', name);
+						}
+					});
+			}
 		});
 		socket.on('successful connection', function () {
 			$('#server-status')
