@@ -1,4 +1,16 @@
-var config = require('./config');
+var config;
+
+try {
+  config = require('./config');
+}
+catch (e) {
+  config = {
+    "admin": {
+      "name": "Admin",
+      "password": "password"
+    }
+  }
+}
 
 module.exports = function(io){
   var chatServer = io.of('/chat');
