@@ -44,24 +44,7 @@ block main
 						button.btn(type="reset") Cancel
 	section#data
 		h3.page-header Contact data
-		address
-			strong David Antonio Rojas Camaggi
-			br
-			| Marcoleta 594, Depto. 9
-			br
-			| Santiago de Chile
-			br
-			| Tel: 
-			a.tele(href="tel:56987322336") +56 (9) 873 22 336
-			br
-			| Email: 
-			a(href="mailto:drojascamaggi@gmail.com") drojascamaggi@gmail.com
-
-
-		p
-			span By the way, you can add me to your contacts using 
-			a#qr(href="/images/mecard.png", target="_blank") this QR code
-			span . 
+		include includes/card
 
 	section#location
 		h3.page-header Location
@@ -86,6 +69,5 @@ block append scripts
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
 	script(src="/javascripts/contact-map.js")
 	script(src="/javascripts/contact-form.js")
-	script(src="/javascripts/qr-modal.js")
 	script(src="/socket.io/socket.io.js")
 	script(src="/javascripts/chat.js")
