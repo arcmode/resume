@@ -1,34 +1,42 @@
 doctype 5
 html
-	head
-		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.min.css')
-		link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome-ie7.min.css')
-	body
-		include includes/navbar
-		#wrapper
-			.container
-				#content
-					block content
-						.row
-							.span3
-								include includes/sidebar
-							.span9
-								block main
-		include includes/footer
-		include includes/loading
-		include includes/githubRibbon
-		include includes/goTop
-	block scripts
-		script(src="/javascripts/jquery-1.9.0.min.js")
-		script(src="/javascripts/jquery-ui-1.10.0.custom.min.js")
-		script(src="/javascripts/loader.js")
-		script(src="/javascripts/section-icons.js")
-		script(src="/javascripts/scroll-to.js")
-		script(src="/javascripts/go-top.js")
-		script(src="/javascripts/sidebar.js")
-		script(src="/javascripts/qr-modal.js")
-		script(src="/javascripts/bootstrap.min.js")
-		script(src="/javascripts/bootstrap-modalize.js")
-		script(src="/javascripts/jquery.hotkeys.js")
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome/css/font-awesome-ie7.min.css')
+  body
+    include includes/navbar
+    #wrapper
+      .container
+        #content
+          block content
+            .row
+              .span3
+                include includes/sidebar
+              .span9
+                block main
+    include includes/footer
+    include includes/loading
+    include includes/githubRibbon
+    include includes/goTop
+  block scripts
+    script(src="/javascripts/jquery-1.9.0.min.js")
+    script(src="/javascripts/jquery-ui-1.10.0.custom.min.js")
+    script(src="/javascripts/loader.js")
+    script(src="/javascripts/section-icons.js")
+    script(src="/javascripts/scroll-to.js")
+    script(src="/javascripts/go-top.js")
+    script(src="/javascripts/sidebar.js")
+    script(src="/javascripts/qr-modal.js")
+    script(src="/javascripts/bootstrap.min.js")
+    script(src="/javascripts/bootstrap-modalize.js")
+    script(src="/javascripts/jquery.hotkeys.js")
+    script
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41456026-1', 'af.cm');
+      ga('send', 'pageview');
