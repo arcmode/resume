@@ -1,6 +1,7 @@
 var mapping = {
 	'interests': 'icon-beaker',
 	'skills': 'icon-wrench',
+	'apis': 'icon-globe',
 	'programming': 'icon-cogs',
 	'education': 'icon-book',
 	'databases': 'icon-key',
